@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.OpenApi.Models;
+using Microsoft.OpenApi;
 using ProductManagementAPI.Data;
 using ProductManagementAPI.Middleware;
 using ProductManagementAPI.Models;
