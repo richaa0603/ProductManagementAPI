@@ -6,8 +6,11 @@ using ProductManagementAPI.Middleware;
 using ProductManagementAPI.Models;
 using ProductManagementAPI.Services;
 using System.Reflection;
-
 var builder = WebApplication.CreateBuilder(args);
+
+// Bind to the port provided by the host (Render injects PORT; default to 8080 locally).
+var port = Environment.GetEnvironmentVariable("PORT") ?? "8080";
+builder.WebHost.UseUrls($"http://+:{port}");
 
 builder.Services.AddControllers()
     .ConfigureApiBehaviorOptions(options =>
@@ -24,18 +27,14 @@ builder.Services.AddControllers()
                 ApiResponse<object>.FailResult(errors));
         };
     });
-
 builder.Services.AddDbContext<AppDbContext>(options =>
     options.UseSqlServer(
         builder.Configuration.GetConnectionString(
             "DefaultConnection")));
-
 builder.Services.AddScoped<
     IProductService,
     ProductService>();
-
 builder.Services.AddEndpointsApiExplorer();
-
 builder.Services.AddSwaggerGen(options =>
 {
     options.SwaggerDoc("v1", new OpenApiInfo
@@ -44,24 +43,27 @@ builder.Services.AddSwaggerGen(options =>
         Version = "v1",
         Description = "RESTful API for managing products using ASP.NET Core and Entity Framework Core."
     });
-
     var xmlFile = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
     var xmlPath = Path.Combine(AppContext.BaseDirectory, xmlFile);
     options.IncludeXmlComments(xmlPath);
 });
-
 var app = builder.Build();
 
+// Global exception handler must be first in the pipeline.
 app.UseMiddleware<ExceptionHandlingMiddleware>();
 
+// Swagger available in all environments — required for production deployments on Render.
+app.UseSwagger();
+app.UseSwaggerUI(options =>
+    options.SwaggerEndpoint("/swagger/v1/swagger.json", "Product Management API v1"));
+
+// HTTPS redirection applies locally only.
+// On Render, TLS is terminated at the edge proxy; the app receives plain HTTP.
+// Enabling this unconditionally causes a redirect loop in production.
 if (app.Environment.IsDevelopment())
 {
-    app.UseSwagger();
-    app.UseSwaggerUI(options =>
-        options.SwaggerEndpoint("/swagger/v1/swagger.json", "Product Management API v1"));
+    app.UseHttpsRedirection();
 }
-
-app.UseHttpsRedirection();
 
 app.MapControllers();
 
