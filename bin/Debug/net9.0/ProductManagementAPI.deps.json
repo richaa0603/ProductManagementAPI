@@ -8,9 +8,8 @@
     ".NETCoreApp,Version=v9.0": {
       "ProductManagementAPI/1.0.0": {
         "dependencies": {
-          "Microsoft.AspNetCore.OpenApi": "9.0.17",
           "Microsoft.EntityFrameworkCore.SqlServer": "9.0.15",
-          "Microsoft.EntityFrameworkCore.Tools": "10.0.9",
+          "Microsoft.EntityFrameworkCore.Tools": "9.0.15",
           "Swashbuckle.AspNetCore": "10.2.3"
         },
         "runtime": {
@@ -57,17 +56,6 @@
           "lib/net6.0/Humanizer.dll": {
             "assemblyVersion": "2.14.0.0",
             "fileVersion": "2.14.1.48190"
-          }
-        }
-      },
-      "Microsoft.AspNetCore.OpenApi/9.0.17": {
-        "dependencies": {
-          "Microsoft.OpenApi": "2.7.5"
-        },
-        "runtime": {
-          "lib/net9.0/Microsoft.AspNetCore.OpenApi.dll": {
-            "assemblyVersion": "9.0.17.0",
-            "fileVersion": "9.0.1726.26907"
           }
         }
       },
@@ -506,7 +494,7 @@
           }
         }
       },
-      "Microsoft.EntityFrameworkCore.Tools/10.0.9": {
+      "Microsoft.EntityFrameworkCore.Tools/9.0.15": {
         "dependencies": {
           "Microsoft.EntityFrameworkCore.Design": "9.0.15"
         }
@@ -1085,13 +1073,6 @@
       "path": "humanizer.core/2.14.1",
       "hashPath": "humanizer.core.2.14.1.nupkg.sha512"
     },
-    "Microsoft.AspNetCore.OpenApi/9.0.17": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-+zcqQ/JecNl4G1hC2mrJ8qDolJv17W3grToEqcGZGqa3cXWaCjA9KTdigU0WVK3LWI0TtOG/Q/joXRdKqFhB9Q==",
-      "path": "microsoft.aspnetcore.openapi/9.0.17",
-      "hashPath": "microsoft.aspnetcore.openapi.9.0.17.nupkg.sha512"
-    },
     "Microsoft.Bcl.AsyncInterfaces/7.0.0": {
       "type": "package",
       "serviceable": true,
@@ -1218,12 +1199,12 @@
       "path": "microsoft.entityframeworkcore.sqlserver/9.0.15",
       "hashPath": "microsoft.entityframeworkcore.sqlserver.9.0.15.nupkg.sha512"
     },
-    "Microsoft.EntityFrameworkCore.Tools/10.0.9": {
+    "Microsoft.EntityFrameworkCore.Tools/9.0.15": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-UDdNBGQTXvuenVLHIFAeiSzUydss3Y9ukbDIn08ZX/MrR6CcVqTvh+le+oKIn3XOWKV/YrMWZpjUzO14oVPwMw==",
-      "path": "microsoft.entityframeworkcore.tools/10.0.9",
-      "hashPath": "microsoft.entityframeworkcore.tools.10.0.9.nupkg.sha512"
+      "sha512": "sha512-QT3iBy2zJYGFrk0RFHG8i4pQJ89YllWBjB7fHy8/ZAgdLsfSwJW896zwQgMRzRqpD8RP1184LPIpwAzkwg4Zvw==",
+      "path": "microsoft.entityframeworkcore.tools/9.0.15",
+      "hashPath": "microsoft.entityframeworkcore.tools.9.0.15.nupkg.sha512"
     },
     "Microsoft.Extensions.ApiDescription.Server/9.0.0": {
       "type": "package",

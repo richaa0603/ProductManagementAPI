@@ -1,0 +1,136 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>ProductManagementAPI</name>
+    </assembly>
+    <members>
+        <member name="T:ProductManagementAPI.Controllers.ProductsController">
+            <summary>
+            Manages product resources.
+            </summary>
+        </member>
+        <member name="M:ProductManagementAPI.Controllers.ProductsController.GetAll(System.Threading.CancellationToken)">
+            <summary>
+            Retrieves all products.
+            </summary>
+            <param name="cancellationToken">Propagates notification that the request has been cancelled.</param>
+            <returns>A list of all products.</returns>
+            <response code="200">Returns the full list of products.</response>
+        </member>
+        <member name="M:ProductManagementAPI.Controllers.ProductsController.GetById(System.Int32,System.Threading.CancellationToken)">
+            <summary>
+            Retrieves a single product by ID.
+            </summary>
+            <param name="id">The unique identifier of the product.</param>
+            <param name="cancellationToken">Propagates notification that the request has been cancelled.</param>
+            <returns>The product with the specified ID.</returns>
+            <response code="200">Returns the requested product.</response>
+            <response code="400">The supplied ID is not a positive integer.</response>
+            <response code="404">No product found with the given ID.</response>
+        </member>
+        <member name="M:ProductManagementAPI.Controllers.ProductsController.Create(ProductManagementAPI.Models.Product,System.Threading.CancellationToken)">
+            <summary>
+            Creates a new product.
+            </summary>
+            <param name="product">The product data to create.</param>
+            <param name="cancellationToken">Propagates notification that the request has been cancelled.</param>
+            <returns>The newly created product with its assigned ID.</returns>
+            <response code="201">Product created successfully.</response>
+            <response code="400">The request body failed model validation.</response>
+        </member>
+        <member name="M:ProductManagementAPI.Controllers.ProductsController.Update(System.Int32,ProductManagementAPI.Models.Product,System.Threading.CancellationToken)">
+            <summary>
+            Updates an existing product.
+            </summary>
+            <param name="id">The unique identifier of the product to update.</param>
+            <param name="product">The updated product data.</param>
+            <param name="cancellationToken">Propagates notification that the request has been cancelled.</param>
+            <returns>The updated product.</returns>
+            <response code="200">Returns the updated product.</response>
+            <response code="400">The supplied ID is invalid or the request body failed model validation.</response>
+            <response code="404">No product found with the given ID.</response>
+        </member>
+        <member name="M:ProductManagementAPI.Controllers.ProductsController.Delete(System.Int32,System.Threading.CancellationToken)">
+            <summary>
+            Deletes a product by ID.
+            </summary>
+            <param name="id">The unique identifier of the product to delete.</param>
+            <param name="cancellationToken">Propagates notification that the request has been cancelled.</param>
+            <response code="204">Product deleted successfully.</response>
+            <response code="400">The supplied ID is not a positive integer.</response>
+            <response code="404">No product found with the given ID.</response>
+        </member>
+        <member name="M:ProductManagementAPI.Controllers.ProductsController.Search(System.String,System.Threading.CancellationToken)">
+            <summary>
+            Searches for products by category.
+            </summary>
+            <param name="category">The category name to filter by. Case-sensitive.</param>
+            <param name="cancellationToken">Propagates notification that the request has been cancelled.</param>
+            <returns>
+            A list of products whose category exactly matches the supplied value.
+            Returns an empty list when no products match — not a 404.
+            </returns>
+            <response code="200">Returns the matching products (may be an empty list).</response>
+            <response code="400">The category query parameter is missing or empty.</response>
+        </member>
+        <member name="T:ProductManagementAPI.Middleware.ExceptionHandlingMiddleware">
+            <summary>
+            Catches any unhandled exceptions in the request pipeline,
+            logs them, and returns a consistent 500 JSON response.
+            </summary>
+        </member>
+        <member name="T:ProductManagementAPI.Migrations.InitialCreate">
+            <inheritdoc />
+        </member>
+        <member name="M:ProductManagementAPI.Migrations.InitialCreate.Up(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:ProductManagementAPI.Migrations.InitialCreate.Down(Microsoft.EntityFrameworkCore.Migrations.MigrationBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="M:ProductManagementAPI.Migrations.InitialCreate.BuildTargetModel(Microsoft.EntityFrameworkCore.ModelBuilder)">
+            <inheritdoc />
+        </member>
+        <member name="T:ProductManagementAPI.Models.ApiResponse`1">
+            <summary>
+            Standard response envelope returned by all API endpoints.
+            </summary>
+            <typeparam name="T">The type of the response payload.</typeparam>
+        </member>
+        <member name="P:ProductManagementAPI.Models.ApiResponse`1.Success">
+            <summary>
+            Indicates whether the request was processed successfully.
+            </summary>
+        </member>
+        <member name="P:ProductManagementAPI.Models.ApiResponse`1.Data">
+            <summary>
+            The response payload. <c>null</c> when the request failed.
+            </summary>
+        </member>
+        <member name="P:ProductManagementAPI.Models.ApiResponse`1.Message">
+            <summary>
+            A human-readable message describing the outcome.
+            </summary>
+        </member>
+        <member name="P:ProductManagementAPI.Models.ApiResponse`1.Errors">
+            <summary>
+            Validation or processing error messages. Empty on success.
+            </summary>
+        </member>
+        <member name="M:ProductManagementAPI.Models.ApiResponse`1.SuccessResult(`0,System.String)">
+            <summary>
+            Creates a successful response wrapping the given data.
+            </summary>
+        </member>
+        <member name="M:ProductManagementAPI.Models.ApiResponse`1.FailResult(System.String)">
+            <summary>
+            Creates a failure response with a single error message.
+            </summary>
+        </member>
+        <member name="M:ProductManagementAPI.Models.ApiResponse`1.FailResult(System.Collections.Generic.IReadOnlyList{System.String})">
+            <summary>
+            Creates a failure response with multiple error messages.
+            </summary>
+        </member>
+    </members>
+</doc>

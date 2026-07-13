@@ -1,13 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "zxSnT0bOu2U=",
+  "dgSpecHash": "rPtzx88cw5s=",
   "success": true,
   "projectFilePath": "C:\\Users\\RichaBharti\\Desktop\\ProductManagementAPI\\ProductManagementAPI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\RichaBharti\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",
     "C:\\Users\\RichaBharti\\.nuget\\packages\\azure.identity\\1.11.4\\azure.identity.1.11.4.nupkg.sha512",
     "C:\\Users\\RichaBharti\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
-    "C:\\Users\\RichaBharti\\.nuget\\packages\\microsoft.aspnetcore.openapi\\9.0.17\\microsoft.aspnetcore.openapi.9.0.17.nupkg.sha512",
     "C:\\Users\\RichaBharti\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\7.0.0\\microsoft.bcl.asyncinterfaces.7.0.0.nupkg.sha512",
     "C:\\Users\\RichaBharti\\.nuget\\packages\\microsoft.build.framework\\17.8.43\\microsoft.build.framework.17.8.43.nupkg.sha512",
     "C:\\Users\\RichaBharti\\.nuget\\packages\\microsoft.build.locator\\1.7.8\\microsoft.build.locator.1.7.8.nupkg.sha512",
@@ -26,7 +25,7 @@
     "C:\\Users\\RichaBharti\\.nuget\\packages\\microsoft.entityframeworkcore.design\\9.0.15\\microsoft.entityframeworkcore.design.9.0.15.nupkg.sha512",
     "C:\\Users\\RichaBharti\\.nuget\\packages\\microsoft.entityframeworkcore.relational\\9.0.15\\microsoft.entityframeworkcore.relational.9.0.15.nupkg.sha512",
     "C:\\Users\\RichaBharti\\.nuget\\packages\\microsoft.entityframeworkcore.sqlserver\\9.0.15\\microsoft.entityframeworkcore.sqlserver.9.0.15.nupkg.sha512",
-    "C:\\Users\\RichaBharti\\.nuget\\packages\\microsoft.entityframeworkcore.tools\\10.0.9\\microsoft.entityframeworkcore.tools.10.0.9.nupkg.sha512",
+    "C:\\Users\\RichaBharti\\.nuget\\packages\\microsoft.entityframeworkcore.tools\\9.0.15\\microsoft.entityframeworkcore.tools.9.0.15.nupkg.sha512",
     "C:\\Users\\RichaBharti\\.nuget\\packages\\microsoft.extensions.apidescription.server\\9.0.0\\microsoft.extensions.apidescription.server.9.0.0.nupkg.sha512",
     "C:\\Users\\RichaBharti\\.nuget\\packages\\microsoft.extensions.caching.abstractions\\9.0.15\\microsoft.extensions.caching.abstractions.9.0.15.nupkg.sha512",
     "C:\\Users\\RichaBharti\\.nuget\\packages\\microsoft.extensions.caching.memory\\9.0.15\\microsoft.extensions.caching.memory.9.0.15.nupkg.sha512",

@@ -8,7 +8,7 @@ using ProductManagementAPI.Services;
 using System.Reflection;
 var builder = WebApplication.CreateBuilder(args);
 
-// Bind to the port provided by the host (Render injects PORT; default to 8080 locally).
+
 var port = Environment.GetEnvironmentVariable("PORT") ?? "8080";
 builder.WebHost.UseUrls($"http://+:{port}");
 

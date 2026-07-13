@@ -60,25 +60,6 @@
           }
         }
       },
-      "Microsoft.AspNetCore.OpenApi/9.0.17": {
-        "type": "package",
-        "dependencies": {
-          "Microsoft.OpenApi": "1.6.17"
-        },
-        "compile": {
-          "lib/net9.0/Microsoft.AspNetCore.OpenApi.dll": {
-            "related": ".xml"
-          }
-        },
-        "runtime": {
-          "lib/net9.0/Microsoft.AspNetCore.OpenApi.dll": {
-            "related": ".xml"
-          }
-        },
-        "frameworkReferences": [
-          "Microsoft.AspNetCore.App"
-        ]
-      },
       "Microsoft.Bcl.AsyncInterfaces/7.0.0": {
         "type": "package",
         "compile": {
@@ -604,16 +585,10 @@
           }
         }
       },
-      "Microsoft.EntityFrameworkCore.Tools/10.0.9": {
+      "Microsoft.EntityFrameworkCore.Tools/9.0.15": {
         "type": "package",
         "dependencies": {
           "Microsoft.EntityFrameworkCore.Design": "9.0.15"
-        },
-        "compile": {
-          "lib/net9.0/_._": {}
-        },
-        "runtime": {
-          "lib/net9.0/_._": {}
         }
       },
       "Microsoft.Extensions.ApiDescription.Server/9.0.0": {
@@ -1774,22 +1749,6 @@
         "lib/netstandard2.0/Humanizer.dll",
         "lib/netstandard2.0/Humanizer.xml",
         "logo.png"
-      ]
-    },
-    "Microsoft.AspNetCore.OpenApi/9.0.17": {
-      "sha512": "+zcqQ/JecNl4G1hC2mrJ8qDolJv17W3grToEqcGZGqa3cXWaCjA9KTdigU0WVK3LWI0TtOG/Q/joXRdKqFhB9Q==",
-      "type": "package",
-      "path": "microsoft.aspnetcore.openapi/9.0.17",
-      "files": [
-        ".nupkg.metadata",
-        ".signature.p7s",
-        "Icon.png",
-        "PACKAGE.md",
-        "THIRD-PARTY-NOTICES.TXT",
-        "lib/net9.0/Microsoft.AspNetCore.OpenApi.dll",
-        "lib/net9.0/Microsoft.AspNetCore.OpenApi.xml",
-        "microsoft.aspnetcore.openapi.9.0.17.nupkg.sha512",
-        "microsoft.aspnetcore.openapi.nuspec"
       ]
     },
     "Microsoft.Bcl.AsyncInterfaces/7.0.0": {
@@ -3010,20 +2969,17 @@
         "microsoft.entityframeworkcore.sqlserver.nuspec"
       ]
     },
-    "Microsoft.EntityFrameworkCore.Tools/10.0.9": {
-      "sha512": "UDdNBGQTXvuenVLHIFAeiSzUydss3Y9ukbDIn08ZX/MrR6CcVqTvh+le+oKIn3XOWKV/YrMWZpjUzO14oVPwMw==",
+    "Microsoft.EntityFrameworkCore.Tools/9.0.15": {
+      "sha512": "QT3iBy2zJYGFrk0RFHG8i4pQJ89YllWBjB7fHy8/ZAgdLsfSwJW896zwQgMRzRqpD8RP1184LPIpwAzkwg4Zvw==",
       "type": "package",
-      "path": "microsoft.entityframeworkcore.tools/10.0.9",
+      "path": "microsoft.entityframeworkcore.tools/9.0.15",
       "hasTools": true,
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "Icon.png",
         "docs/PACKAGE.md",
-        "lib/net10.0/_._",
-        "lib/net8.0/_._",
-        "lib/net9.0/_._",
-        "microsoft.entityframeworkcore.tools.10.0.9.nupkg.sha512",
+        "microsoft.entityframeworkcore.tools.9.0.15.nupkg.sha512",
         "microsoft.entityframeworkcore.tools.nuspec",
         "tools/EntityFrameworkCore.PS2.psd1",
         "tools/EntityFrameworkCore.PS2.psm1",
@@ -3034,8 +2990,8 @@
         "tools/net472/any/ef.exe",
         "tools/net472/win-arm64/ef.exe",
         "tools/net472/win-x86/ef.exe",
-        "tools/net8.0/any/ef.dll",
-        "tools/net8.0/any/ef.runtimeconfig.json"
+        "tools/netcoreapp2.0/any/ef.dll",
+        "tools/netcoreapp2.0/any/ef.runtimeconfig.json"
       ]
     },
     "Microsoft.Extensions.ApiDescription.Server/9.0.0": {
@@ -5194,9 +5150,8 @@
   },
   "projectFileDependencyGroups": {
     "net9.0": [
-      "Microsoft.AspNetCore.OpenApi >= 9.0.17",
       "Microsoft.EntityFrameworkCore.SqlServer >= 9.0.15",
-      "Microsoft.EntityFrameworkCore.Tools >= 10.0.9",
+      "Microsoft.EntityFrameworkCore.Tools >= 9.0.15",
       "Swashbuckle.AspNetCore >= 10.2.3"
     ]
   },
@@ -5251,10 +5206,6 @@
       "net9.0": {
         "targetAlias": "net9.0",
         "dependencies": {
-          "Microsoft.AspNetCore.OpenApi": {
-            "target": "Package",
-            "version": "[9.0.17, )"
-          },
           "Microsoft.EntityFrameworkCore.SqlServer": {
             "target": "Package",
             "version": "[9.0.15, )"
@@ -5263,7 +5214,7 @@
             "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
             "suppressParent": "All",
             "target": "Package",
-            "version": "[10.0.9, )"
+            "version": "[9.0.15, )"
           },
           "Swashbuckle.AspNetCore": {
             "target": "Package",
